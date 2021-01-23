@@ -31,12 +31,14 @@ private:
 
 	float Reach = 100.0f;
 
-	UPhysicsHandleComponent* PhysicsHandle;
-
 	void FindPhysicsHandle();
 
 	void SetupInputComponent();
 
+	UPROPERTY()
+	UPhysicsHandleComponent* PhysicsHandle;
+
+	UPROPERTY()
 	UInputComponent* InputComponent;
 
 	UFUNCTION()
