@@ -29,6 +29,8 @@ public:
 
 	void FindPressurePlate();
 
+	bool FindMeshToRotate();
+
 	float TotalMassOfActors() const;
 
 protected:
@@ -49,10 +51,11 @@ private:
 
 	bool bCloseDoorSound;
 
-	UStaticMeshComponent* Mesh;
-
 	UPROPERTY()
 	UAudioComponent* AudioComponent;
+
+	UPROPERTY()
+	UStaticMeshComponent* MeshToRotate;
 
 	UPROPERTY(EditAnywhere)
 	float OpenAngle = 90.0f;
@@ -68,5 +71,6 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	float MassToOpenDoors;
+
 	
 };
